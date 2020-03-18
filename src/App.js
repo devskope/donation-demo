@@ -1,19 +1,24 @@
 import React from 'react';
+import { BrowserRouter, Link } from 'react-router-dom';
 import { Image, Divider, Header } from 'semantic-ui-react';
 
+import { RenderRoutes, routes } from './routes';
 import logo from './assets/logo.svg';
 import './assets/App.css';
 
 const App = () => {
   return (
     <div className='App'>
-      <header className='App-header'>
-        <Header>
-          <Image className='App-logo' centered src={logo} alt='logo' />
+      <BrowserRouter>
+        <header className='App-header'>
+          <Header as={Link} to='/'>
+            <Image className='App-logo' centered src={logo} alt='logo' />
             Payment Gateway
           </Header>
-      </header>
-      <Divider />
+        </header>
+        <Divider />
+        <RenderRoutes routes={routes} />
+      </BrowserRouter>
     </div>
   );
 };
