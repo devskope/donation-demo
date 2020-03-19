@@ -1,6 +1,8 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
+import Home from "../pages/home";
+
 const RouteWithSubRoutes = route => (
   <Route
     path={route.path}
@@ -25,5 +27,5 @@ export const RenderRoutes = ({ routes }) => (
 );
 
 export const routes = [
-  { path: '/', key: 'home', component: () => 'Home page', exact: true }
+  { path: '/', key: 'home', component: Home, exact: true }
 ];

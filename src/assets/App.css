@@ -1,9 +1,14 @@
 .App {
   height: 100vh;
+  padding: 0 1rem;
 }
 .App-header {
   padding-top: 1.5rem;
   text-align: center;
+}
+
+.ui.home-lede {
+  padding: 5rem 0;
 }
 
 @media (prefers-reduced-motion: no-preference) {
