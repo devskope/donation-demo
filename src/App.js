@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Link } from 'react-router-dom';
-import { Image, Divider, Header } from 'semantic-ui-react';
+import { Header, Image } from 'semantic-ui-react';
 
 import { RenderRoutes, routes } from './routes';
 import logo from './assets/logo.svg';
@@ -16,7 +16,6 @@ const App = () => {
             Payment Gateway
           </Header>
         </header>
-        <Divider />
         <RenderRoutes routes={routes} />
       </BrowserRouter>
     </div>
