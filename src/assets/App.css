@@ -42,6 +42,11 @@
   margin-top: -2rem;
   max-width: 570px;
 }
+.ui.padded.segment.confirmation {
+  margin: auto;
+  margin-top: 5rem;
+  max-width: 600px;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

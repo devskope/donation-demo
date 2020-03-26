@@ -6,7 +6,20 @@ export const createPayment = async payload => {
   const response = { data: null, error: null };
 
   try {
-    const { data } = await apiPost('/pay', payload);
+    const { data } = await apiPost('/payment', payload);
+    response.data = data;
+  } catch (error) {
+    response.error = await handleApiError(error);
+  }
+
+  return response;
+};
+
+export const verifyPayment = async reference => {
+  const response = { data: null, error: null };
+
+  try {
+    const { data } = await apiPost('/payment/verify', { reference });
     response.data = data;
   } catch (error) {
     response.error = await handleApiError(error);

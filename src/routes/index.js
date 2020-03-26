@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 
 import Home from '../pages/home';
 import Donation from '../pages/payment/Donation';
-
+import ConfirmDonation from '../pages/payment/ConfirmDonation';
 
 const RouteWithSubRoutes = route => (
   <Route
@@ -43,7 +43,12 @@ export const routes = [
         component: Donation,
         exact: true,
       },
-
+      {
+        path: '/donate/confirm',
+        key: 'confirmDonation',
+        component: ConfirmDonation,
+        exact: true,
+      }
     ]
   }
 ];

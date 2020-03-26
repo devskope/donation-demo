@@ -14,7 +14,7 @@ const Home = props => {
   const givingCategories = ['Purpose 1', 'Purpose 2', 'Purpose 3'];
 
   return (
-    <Container textAlign='center'>
+    <Container className="page" textAlign='center'>
       <Header className='home-lede' size='huge' content='Giving' />
       <Grid columns={3} padded stackable verticalAlign='middle'>
         <Grid.Row>
